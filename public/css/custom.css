@@ -1,0 +1,149 @@
+/* Fondo general con degradado azul → celeste */
+body {
+    background: linear-gradient(135deg, #0d6efd 0%, #66b2ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px 20px; /* Espacio en los costados */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 850px;
+    background: #00A3D6; /* Azul sólido */
+    border-radius: 15px;
+    padding: 40px 50px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    text-align: left;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Animación suave al entrar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Encabezado */
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header img {
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+
+.form-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Campos */
+.form-control,
+.form-select,
+textarea {
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255,255,255,0.6);
+}
+
+/* Secciones */
+.form-section-title {
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+/* Botón negro */
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .form-container {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .form-header img {
+        width: 130px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
