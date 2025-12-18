@@ -34,14 +34,14 @@
                         <td>{{ $equipment->model }}</td>
                         <td>{{ $equipment->serial_number }}</td>
                         <td>{{ $equipment->notes }}</td>
-                        <td>
+                        {{-- <td>
                             <a href="{{ route('equipments.show', $equipment) }}" class="btn btn-sm btn-info">Ver</a>
                             <a href="{{ route('equipments.edit', $equipment) }}" class="btn btn-sm btn-warning">Editar</a>
                             <form action="{{ route('equipments.destroy', $equipment) }}" method="POST" style="display:inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar este equipo?')">Eliminar</button>
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                 @endforeach

@@ -20,14 +20,14 @@
             <td>{{ $c->cuit_dni }}</td>
             <td>{{ $c->localidad }}</td>
             <td>{{ $c->email_admin }}</td>
-            <td>
+            {{-- <td>
             <a href="{{ route('customers.show',$c) }}" class="btn btn-sm btn-info">Ver</a>
             <a href="{{ route('customers.edit',$c) }}" class="btn btn-sm btn-warning">Editar</a>
             <form action="{{ route('customers.destroy',$c) }}" method="POST" class="d-inline">
                 @csrf @method('DELETE')
                 <button class="btn btn-sm btn-danger" onclick="return confirm('Eliminar?')">Eliminar</button>
             </form>
-            </td>
+            </td> --}}
         </tr>
         @empty
         <tr><td colspan="6">No hay clientes</td></tr>
