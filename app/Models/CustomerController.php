@@ -7,8 +7,8 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customer::all();
-        return view('customers.index', compact('customers'));
+        $customer = Customer::all();
+        return view('customers.index', compact('customer'));
     }
 
     public function show($id)
