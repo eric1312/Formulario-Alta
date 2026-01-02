@@ -59,13 +59,23 @@
                 <input type="text" id="telefono_contacto_administrativo" name="telefono_contacto_administrativo" class="form-control" value="{{ old('telefono_contacto_administrativo', $customer->telefono_contacto_administrativo) }}" required>
             </div>
 
-            <div class="col-md-6">
-                <label for="tiene_movil_verificador">¿Tiene Móvil Verificador?</label>
-                <select id="tiene_movil_verificador" name="tiene_movil_verificador" class="form-select">
-                    <option value="1" {{ $customer->tiene_movil_verificador ? 'selected' : '' }}>Sí</option>
-                    <option value="0" {{ !$customer->tiene_movil_verificador ? 'selected' : '' }}>No</option>
-                </select>
+            <div class="form-check mb-3">
+                <!-- SIEMPRE envía 0 -->
+                <input type="hidden" name="tiene_movil_verificador" value="0">
+
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="tiene_movil_verificador"
+                    name="tiene_movil_verificador"
+                    value="1"
+                    {{ old('tiene_movil_verificador', $customer->tiene_movil_verificador) ? 'checked' : '' }}
+                >
+                <label class="form-check-label" for="tiene_movil_verificador">
+                    ¿Tiene Móvil Verificador Propio?
+                </label>
             </div>
+
 
             <div class="col-md-6">
                 <label for="email_config_dealer">Email Config Dealer</label>

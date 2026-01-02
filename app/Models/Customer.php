@@ -32,4 +32,8 @@ class Customer extends Model
     public function softguardAccounts() { return $this->hasMany(SoftguardAccount::class); }
     public function equipments() { return $this->hasMany(Equipment::class); }
     public function movilVerificadores() { return $this->hasMany(MovilVerificador::class); }
+    protected $casts = [
+        'tiene_movil_verificador' => 'boolean',
+    ];
+
 }

@@ -17,7 +17,7 @@
         <div class="container">
             <div class="form-container">
                 <div class="form-header text-center">
-                    <img src="<?php echo e(asset('img/logoProteger.jpg')); ?>" alt="Logo" class="logo">
+                    <img src="<?php echo e(asset('img/logoGorrito.jpg')); ?>" alt="Logo" class="logo">
                     <h1>Formulario de Alta de Cliente</h1>
                 </div>
 
@@ -93,14 +93,24 @@
 
                         <div class="form-section-title">Configuración de Dealer</div>
 
-                        <div class="col-md-6">
-                            <label for="movil_verificador" class="form-label">¿Tiene Móvil Verificador Propio? *</label>
-                            <select name="movil_verificador" id="movil_verificador" class="form-select" required>
-                                <option value="">Seleccione una opción</option>
-                                <option value="si" <?php echo e(old('movil_verificador') == 'si' ? 'selected' : ''); ?>>Sí</option>
-                                <option value="no" <?php echo e(old('movil_verificador') == 'no' ? 'selected' : ''); ?>>No</option>
-                            </select>
+                        <div class="form-check">
+                            <!-- Esto garantiza que se envíe 0 si el checkbox está desmarcado -->
+                            <input type="hidden" name="tiene_movil_verificador" value="0">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                name="tiene_movil_verificador"
+                                id="tiene_movil_verificador"
+                                value="1"
+                                <?php echo e(old('tiene_movil_verificador', $customer->tiene_movil_verificador ?? false) ? 'checked' : ''); ?>
+
+                            >
+                            <label class="form-check-label" for="tiene_movil_verificador">
+                                ¿Tiene Móvil Verificador Propio?
+                            </label>
                         </div>
+
 
                         <div class="col-md-6">
                             <label for="email_config_dealer" class="form-label">Email para Config Dealer *</label>

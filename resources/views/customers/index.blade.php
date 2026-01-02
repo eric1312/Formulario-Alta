@@ -6,7 +6,7 @@
     <title>Listado de Clientes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-    <link rel="icon" href="{{ asset('img/logoProteger.jpg') }}" type="image/jpeg">
+    <link rel="icon" href="{{ asset('img/logoGorrito.jpg') }}" type="image/jpeg">
 </head>
 <body>
 
